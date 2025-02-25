@@ -19,14 +19,14 @@ public class ServerChat {
         frame.setSize(500, 500);
         frame.setLayout(new BorderLayout());
 
-        // Tema "Matrix" - tela escura e texto verde
-        frame.getContentPane().setBackground(Color.BLACK);  // Fundo preto
+        
+        frame.getContentPane().setBackground(Color.BLACK);  
         textArea = new JTextArea();
         textArea.setEditable(false);
-        textArea.setForeground(new Color(0, 255, 0));  // Verde tipo Matrix
-        textArea.setBackground(Color.BLACK);  // Fundo preto
-        textArea.setFont(new Font("Courier New", Font.PLAIN, 14));  // Fonte monoespaçada
-        textArea.setCaretColor(Color.GREEN);  // Cor do cursor
+        textArea.setForeground(new Color(0, 255, 0));  
+        textArea.setBackground(Color.BLACK);  
+        textArea.setFont(new Font("Courier New", Font.PLAIN, 14)); 
+        textArea.setCaretColor(Color.GREEN);  
         frame.add(new JScrollPane(textArea), BorderLayout.CENTER);
 
         textField = new JTextField();
@@ -37,7 +37,7 @@ public class ServerChat {
         frame.setVisible(true);
 
         try (ServerSocket serverSocket = new ServerSocket(8080)) {
-            System.out.println("\033[0;32mServidor iniciado na porta 8080...");  // Terminal retro
+            System.out.println("\033[0;32mServidor iniciado na porta 8080...");  
             Socket socket = serverSocket.accept();
             System.out.println("\033[0;32mCliente conectado!");
 
