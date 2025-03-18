@@ -1,1 +1,1 @@
-# JXat
+# JChat - InterN3T Communication
